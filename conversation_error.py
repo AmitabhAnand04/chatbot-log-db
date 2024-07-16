@@ -3,8 +3,8 @@ from azure.cosmos import CosmosClient, exceptions
 import uuid
 
 # Initialize the Cosmos client
-url = "CosmosDB Url"
-key = "CosmosDB Key"
+url = "https://chatbot-log-db.documents.azure.com:443/"
+key = "UU5sgNrD1k5eKj0K7xFCYFasBpcHY2awBTHB9fwIrZ8KKKqDtdwPfXvxm1s9kg8E9rxOAz5l1DIVACDb5BgdxQ=="
 client = CosmosClient(url, key)
 
 # Define the database and container
