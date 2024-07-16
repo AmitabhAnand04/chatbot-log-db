@@ -1,9 +1,14 @@
+import os
 import datetime
 from azure.cosmos import CosmosClient, exceptions
+from dotenv import load_dotenv
 
-# Initialize the Cosmos client
-url = "https://chatbot-log-db.documents.azure.com:443/"
-key = "UU5sgNrD1k5eKj0K7xFCYFasBpcHY2awBTHB9fwIrZ8KKKqDtdwPfXvxm1s9kg8E9rxOAz5l1DIVACDb5BgdxQ=="
+# Load environment variables from a .env file
+load_dotenv()
+
+# Initialize the Cosmos client using environment variables
+url = os.getenv("COSMOS_DB_ACCOUNT_URL")
+key = os.getenv("COSMOS_DB_ACCOUNT_KEY")
 client = CosmosClient(url, key)
 
 # Define the database and container
